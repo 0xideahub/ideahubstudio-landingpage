@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeaHubStudios - Transform Ideas into Designs</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- SF Pro Display font -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follow"></div>
+
+    <nav class="nav">
+        <a href="/" class="logo">IdeaHubStudios</a>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <div class="fireflies-container">
+        <div class="glow-circle"></div>
+        <!-- Fireflies will be dynamically added here -->
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Ideas into Beautiful Designs</h1>
+            <div class="stagger-visualizer">
+                <div class="cursor"></div>
+            </div>
+            <p>Harness the power of AI to bring your design concepts to life</p>
+            
+            <div class="prompt-container">
+                <textarea 
+                    class="prompt-input" 
+                    placeholder="Ask the Hub to create a design that..."
+                    rows="1"
+                    oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                ></textarea>
+                <div class="prompt-actions">
+                    <button class="create-button">Create</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <h2 class="testimonials-title">Loved by thousands of designers worldwide</h2>
+        <div class="testimonials-container">
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"IdeaHubStudios transformed how I approach design. With AI assistance, I can now create stunning mockups in minutes that used to take hours. The suggestions are incredibly intuitive and on-point."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/abstract.svg" alt="Company logo">
+                        </div>
+                        <span class="author-name">Thomas K.</span>
+                        <span class="author-title">UI/UX Designer</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The AI-powered design suggestions are mind-blowing. It's like having a senior designer by your side, offering creative solutions while maintaining your unique style and brand identity."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/designernews.svg" alt="Company logo">
+                        </div>
+                        <span class="author-name">Maria R.</span>
+                        <span class="author-title">Creative Director</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"What impressed me most is how it learns from my design preferences. Each suggestion gets better and more aligned with my style. It's not just a tool, it's a creative companion."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/behance.svg" alt="Company logo">
+                        </div>
+                        <span class="author-name">Daniel M.</span>
+                        <span class="author-title">Product Designer</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The speed and precision of the AI design suggestions are incredible. It helps me explore creative directions I wouldn't have thought of, while keeping everything on-brand and professional."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/figma.svg" alt="Company logo">
+                        </div>
+                        <span class="author-name">Rachel L.</span>
+                        <span class="author-title">Brand Designer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="inspiration-section">
+        <div class="inspiration-header">
+            <h2>Inspiration</h2>
+            <a href="#" class="view-all">View All</a>
+        </div>
+        <div class="inspiration-grid">
+            <div class="inspiration-card">
+                <div class="inspiration-image">
+                    <img src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?w=500&auto=format&fit=crop&q=60" alt="Modern Landing Page Design">
+                </div>
+                <div class="inspiration-info">
+                    <h3 class="inspiration-title">Modern Landing Page Design</h3>
+                    <div class="inspiration-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">Sarah Chen</span>
+                    </div>
+                </div>
+            </div>
+            <div class="inspiration-card">
+                <div class="inspiration-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=60" alt="E-commerce Product Page">
+                </div>
+                <div class="inspiration-info">
+                    <h3 class="inspiration-title">E-commerce Product Page</h3>
+                    <div class="inspiration-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">Alex Morgan</span>
+                    </div>
+                </div>
+            </div>
+            <div class="inspiration-card">
+                <div class="inspiration-image">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&auto=format&fit=crop&q=60" alt="Mobile App Interface">
+                </div>
+                <div class="inspiration-info">
+                    <h3 class="inspiration-title">Mobile App Interface</h3>
+                    <div class="inspiration-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">James Wilson</span>
+                    </div>
+                </div>
+            </div>
+            <div class="inspiration-card">
+                <div class="inspiration-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60" alt="Dashboard Analytics">
+                </div>
+                <div class="inspiration-info">
+                    <h3 class="inspiration-title">Dashboard Analytics</h3>
+                    <div class="inspiration-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">Emma Davis</span>
+                    </div>
+                </div>
+            </div>
+            <div class="inspiration-card">
+                <div class="inspiration-image">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&auto=format&fit=crop&q=60" alt="AI Model Visualization">
+                </div>
+                <div class="inspiration-info">
+                    <h3 class="inspiration-title">AI Model Visualization</h3>
+                    <div class="inspiration-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">Maya Patel</span>
+                    </div>
+                </div>
+            </div>
+            <div class="inspiration-card">
+                <div class="inspiration-image">
+                    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=500&auto=format&fit=crop&q=60" alt="Email Newsletter Design">
+                </div>
+                <div class="inspiration-info">
+                    <h3 class="inspiration-title">Email Newsletter Design</h3>
+                    <div class="inspiration-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">Chris Torres</span>
+                    </div>
+                </div>
+            </div>
+            <div class="inspiration-card">
+                <div class="inspiration-image">
+                    <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?w=500&auto=format&fit=crop&q=60" alt="Help Center Portal">
+                </div>
+                <div class="inspiration-info">
+                    <h3 class="inspiration-title">Help Center Portal</h3>
+                    <div class="inspiration-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">Lisa Wang</span>
+                    </div>
+                </div>
+            </div>
+            <div class="inspiration-card">
+                <div class="inspiration-image">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=60" alt="Dark Mode Interface">
+                </div>
+                <div class="inspiration-info">
+                    <h3 class="inspiration-title">Dark Mode Interface</h3>
+                    <div class="inspiration-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">Marcus Kim</span>
+                    </div>
+                </div>
+            </div>
+            <div class="inspiration-card">
+                <div class="inspiration-image">
+                    <img src="https://images.unsplash.com/photo-1618788372246-79faff0c3742?w=500&auto=format&fit=crop&q=60" alt="Design System Editor">
+                </div>
+                <div class="inspiration-info">
+                    <h3 class="inspiration-title">Design System Editor</h3>
+                    <div class="inspiration-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">Rachel Singh</span>
+                    </div>
+                </div>
+            </div>
+            <div class="inspiration-card">
+                <div class="inspiration-image">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&auto=format&fit=crop&q=60" alt="Medical Dashboard">
+                </div>
+                <div class="inspiration-info">
+                    <h3 class="inspiration-title">Medical Dashboard</h3>
+                    <div class="inspiration-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">David Lee</span>
+                    </div>
+                </div>
+            </div>
+            <div class="inspiration-card">
+                <div class="inspiration-image">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500&auto=format&fit=crop&q=60" alt="Security Platform">
+                </div>
+                <div class="inspiration-info">
+                    <h3 class="inspiration-title">Security Platform</h3>
+                    <div class="inspiration-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">Sophie Chen</span>
+                    </div>
+                </div>
+            </div>
+            <div class="inspiration-card">
+                <div class="inspiration-image">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&auto=format&fit=crop&q=60" alt="Learning Platform">
+                </div>
+                <div class="inspiration-info">
+                    <h3 class="inspiration-title">Learning Platform</h3>
+                    <div class="inspiration-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">Tom Anderson</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>IdeaHubStudios</h3>
+                <p>Transform your design workflow with the power of AI. Create, iterate, and innovate faster than ever before.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/discord.svg" alt="Discord">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Enterprise</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">API Reference</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 IdeaHubStudios. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Settings</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create fireflies
+        const numFireflies = 50;
+        const hero = document.querySelector('.hero');
+        
+        for (let i = 0; i < numFireflies; i++) {
+            const firefly = document.createElement('div');
+            firefly.className = 'firefly';
+            hero.appendChild(firefly);
+            
+            firefly.style.left = `${Math.random() * 100}%`;
+            firefly.style.top = `${Math.random() * 100}%`;
+            
+            anime({
+                targets: firefly,
+                translateX: () => anime.random(-20, 20) + 'vw',
+                translateY: () => anime.random(-20, 20) + 'vh',
+                scale: [
+                    { value: 0.1, duration: 500, easing: 'easeOutSine' },
+                    { value: 1, duration: 1000, easing: 'easeInOutQuad' }
+                ],
+                opacity: [
+                    { value: 0.5, duration: 500, easing: 'easeOutSine' },
+                    { value: 1, duration: 1000, easing: 'easeInOutQuad' }
+                ],
+                delay: anime.random(0, 2000),
+                duration: 4000,
+                loop: true,
+                direction: 'alternate'
+            });
+        }
+
+        // Custom cursor animation
+        const cursor = document.querySelector('.cursor');
+        const cursorFollow = document.querySelector('.cursor-follow');
+        
+        document.addEventListener('mousemove', (e) => {
+            anime({
+                targets: cursor,
+                left: e.clientX - 10,
+                top: e.clientY - 10,
+                duration: 50,
+                easing: 'linear'
+            });
+            
+            anime({
+                targets: cursorFollow,
+                left: e.clientX - 50,
+                top: e.clientY - 50,
+                duration: 800,
+                easing: 'easeOutExpo'
+            });
+        });
+
+        // Logo line drawing animation
+        anime({
+            targets: '.logo::after',
+            scaleX: [0, 1],
+            translateX: [500, 0],
+            easing: 'easeOutExpo',
+            duration: 1400,
+            delay: 1000
+        });
+
+        // Animate navigation links
+        anime({
+            targets: '.nav-links a',
+            translateY: 0,
+            opacity: 1,
+            delay: anime.stagger(100),
+            easing: 'easeOutExpo',
+            duration: 1000
+        });
+
+        // Animate hero content
+        anime({
+            targets: ['.hero h1', '.hero p'],
+            translateY: 0,
+            opacity: 1,
+            delay: anime.stagger(200),
+            easing: 'easeOutExpo',
+            duration: 1000
+        });
+
+        // Initialize grid staggering animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const staggerVisualizerEl = document.querySelector('.stagger-visualizer');
+            const fragment = document.createDocumentFragment();
+            const rows = 21;
+            const grid = [rows, rows];
+            const numberOfElements = rows * rows;
+            let gridAnimation;
+
+            for (let i = 0; i < numberOfElements; i++) {
+                const dotEl = document.createElement('div');
+                dotEl.classList.add('dot');
+                fragment.appendChild(dotEl);
+            }
+
+            staggerVisualizerEl.appendChild(fragment);
+
+            let index = Math.floor(Math.random() * numberOfElements);
+            let nextIndex = 0;
+
+            anime.set('.stagger-visualizer .cursor', {
+                translateX: anime.stagger('-0.5rem', {grid, from: index, axis: 'x'}),
+                translateY: anime.stagger('-0.5rem', {grid, from: index, axis: 'y'})
+            });
+
+            function animateGrid() {
+                if (gridAnimation) gridAnimation.pause();
+
+                nextIndex = Math.floor(Math.random() * numberOfElements);
+
+                gridAnimation = anime.timeline({
+                    easing: 'easeInOutQuad',
+                    complete: animateGrid
+                })
+                .add({
+                    targets: '.stagger-visualizer .cursor',
+                    keyframes: [
+                        { scale: .625 },
+                        { scale: 1.125 },
+                        { scale: 1 }
+                    ],
+                    duration: 600
+                })
+                .add({
+                    targets: '.stagger-visualizer .dot',
+                    keyframes: [
+                        {
+                            translateX: anime.stagger('-.0875rem', {grid, from: index, axis: 'x'}),
+                            translateY: anime.stagger('-.0875rem', {grid, from: index, axis: 'y'}),
+                            duration: 200
+                        }, {
+                            translateX: anime.stagger('.0625rem', {grid, from: index, axis: 'x'}),
+                            translateY: anime.stagger('.0625rem', {grid, from: index, axis: 'y'}),
+                            scale: 2,
+                            duration: 500
+                        }, {
+                            translateX: 0,
+                            translateY: 0,
+                            scale: 1,
+                            duration: 600,
+                        }
+                    ],
+                    delay: anime.stagger(50, {grid, from: index}),
+                }, 0)
+                .add({
+                    targets: '.stagger-visualizer .cursor',
+                    translateX: { 
+                        from: anime.stagger('-0.5rem', {grid, from: index, axis: 'x'}),
+                        to: anime.stagger('-0.5rem', {grid, from: nextIndex, axis: 'x'}),
+                        duration: Math.random() * 400 + 800
+                    },
+                    translateY: {
+                        from: anime.stagger('-0.5rem', {grid, from: index, axis: 'y'}),
+                        to: anime.stagger('-0.5rem', {grid, from: nextIndex, axis: 'y'}),
+                        duration: Math.random() * 400 + 800
+                    },
+                    easing: 'easeOutCirc'
+                }, '-=1500');
+
+                index = nextIndex;
+            }
+
+            animateGrid();
+        });
+    </script>
+</body>
+</html> 
