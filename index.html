@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' fonts.cdnfonts.com; img-src 'self' images.unsplash.com cdn.jsdelivr.net data:; font-src 'self' fonts.cdnfonts.com; connect-src 'self';">
     <title>IdeaHubStudios - Transform Ideas into Designs</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="/styles.css">
     <!-- SF Pro Display font -->
-    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display" crossorigin="anonymous">
+    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/abstract.svg">
+    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/designernews.svg">
+    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/behance.svg">
+    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/figma.svg">
 </head>
 <body>
     <div class="cursor"></div>
@@ -40,7 +45,8 @@
                     class="prompt-input" 
                     placeholder="Ask the Hub to create a design that..."
                     rows="1"
-                    oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                    maxlength="500"
+                    oninput="this.value = this.value.replace(/[<>]/g, ''); this.style.height = '';this.style.height = this.scrollHeight + 'px'"
                 ></textarea>
                 <div class="prompt-actions">
                     <button class="create-button">Create</button>
@@ -57,7 +63,7 @@
                     <p class="testimonial-text">"IdeaHubStudios transformed how I approach design. With AI assistance, I can now create stunning mockups in minutes that used to take hours. The suggestions are incredibly intuitive and on-point."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/abstract.svg" alt="Company logo">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/abstract.svg" alt="Company logo" width="24" height="24" loading="lazy">
                         </div>
                         <span class="author-name">Thomas K.</span>
                         <span class="author-title">UI/UX Designer</span>
@@ -67,7 +73,7 @@
                     <p class="testimonial-text">"The AI-powered design suggestions are mind-blowing. It's like having a senior designer by your side, offering creative solutions while maintaining your unique style and brand identity."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/designernews.svg" alt="Company logo">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/designernews.svg" alt="Company logo" width="24" height="24" loading="lazy">
                         </div>
                         <span class="author-name">Maria R.</span>
                         <span class="author-title">Creative Director</span>
@@ -77,7 +83,7 @@
                     <p class="testimonial-text">"What impressed me most is how it learns from my design preferences. Each suggestion gets better and more aligned with my style. It's not just a tool, it's a creative companion."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/behance.svg" alt="Company logo">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/behance.svg" alt="Company logo" width="24" height="24" loading="lazy">
                         </div>
                         <span class="author-name">Daniel M.</span>
                         <span class="author-title">Product Designer</span>
@@ -87,7 +93,7 @@
                     <p class="testimonial-text">"The speed and precision of the AI design suggestions are incredible. It helps me explore creative directions I wouldn't have thought of, while keeping everything on-brand and professional."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/figma.svg" alt="Company logo">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/figma.svg" alt="Company logo" width="24" height="24" loading="lazy">
                         </div>
                         <span class="author-name">Rachel L.</span>
                         <span class="author-title">Brand Designer</span>
@@ -105,7 +111,7 @@
         <div class="inspiration-grid">
             <div class="inspiration-card">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?w=500&auto=format&fit=crop&q=60" alt="Modern Landing Page Design">
+                    <img src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?w=500&auto=format&fit=crop&q=60" alt="Modern Landing Page Design" width="500" height="300" loading="lazy">
                 </div>
                 <div class="inspiration-info">
                     <h3 class="inspiration-title">Modern Landing Page Design</h3>
@@ -117,7 +123,7 @@
             </div>
             <div class="inspiration-card">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=60" alt="E-commerce Product Page">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=60" alt="E-commerce Product Page" width="500" height="300" loading="lazy">
                 </div>
                 <div class="inspiration-info">
                     <h3 class="inspiration-title">E-commerce Product Page</h3>
@@ -129,7 +135,7 @@
             </div>
             <div class="inspiration-card">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&auto=format&fit=crop&q=60" alt="Mobile App Interface">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&auto=format&fit=crop&q=60" alt="Mobile App Interface" width="500" height="300" loading="lazy">
                 </div>
                 <div class="inspiration-info">
                     <h3 class="inspiration-title">Mobile App Interface</h3>
@@ -141,7 +147,7 @@
             </div>
             <div class="inspiration-card">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60" alt="Dashboard Analytics">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60" alt="Dashboard Analytics" width="500" height="300" loading="lazy">
                 </div>
                 <div class="inspiration-info">
                     <h3 class="inspiration-title">Dashboard Analytics</h3>
@@ -153,7 +159,7 @@
             </div>
             <div class="inspiration-card">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&auto=format&fit=crop&q=60" alt="AI Model Visualization">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&auto=format&fit=crop&q=60" alt="AI Model Visualization" width="500" height="300" loading="lazy">
                 </div>
                 <div class="inspiration-info">
                     <h3 class="inspiration-title">AI Model Visualization</h3>
@@ -165,7 +171,7 @@
             </div>
             <div class="inspiration-card">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=500&auto=format&fit=crop&q=60" alt="Email Newsletter Design">
+                    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=500&auto=format&fit=crop&q=60" alt="Email Newsletter Design" width="500" height="300" loading="lazy">
                 </div>
                 <div class="inspiration-info">
                     <h3 class="inspiration-title">Email Newsletter Design</h3>
@@ -177,7 +183,7 @@
             </div>
             <div class="inspiration-card">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?w=500&auto=format&fit=crop&q=60" alt="Help Center Portal">
+                    <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?w=500&auto=format&fit=crop&q=60" alt="Help Center Portal" width="500" height="300" loading="lazy">
                 </div>
                 <div class="inspiration-info">
                     <h3 class="inspiration-title">Help Center Portal</h3>
@@ -189,7 +195,7 @@
             </div>
             <div class="inspiration-card">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=60" alt="Dark Mode Interface">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=60" alt="Dark Mode Interface" width="500" height="300" loading="lazy">
                 </div>
                 <div class="inspiration-info">
                     <h3 class="inspiration-title">Dark Mode Interface</h3>
@@ -201,7 +207,7 @@
             </div>
             <div class="inspiration-card">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1618788372246-79faff0c3742?w=500&auto=format&fit=crop&q=60" alt="Design System Editor">
+                    <img src="https://images.unsplash.com/photo-1618788372246-79faff0c3742?w=500&auto=format&fit=crop&q=60" alt="Design System Editor" width="500" height="300" loading="lazy">
                 </div>
                 <div class="inspiration-info">
                     <h3 class="inspiration-title">Design System Editor</h3>
@@ -213,7 +219,7 @@
             </div>
             <div class="inspiration-card">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&auto=format&fit=crop&q=60" alt="Medical Dashboard">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&auto=format&fit=crop&q=60" alt="Medical Dashboard" width="500" height="300" loading="lazy">
                 </div>
                 <div class="inspiration-info">
                     <h3 class="inspiration-title">Medical Dashboard</h3>
@@ -225,7 +231,7 @@
             </div>
             <div class="inspiration-card">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500&auto=format&fit=crop&q=60" alt="Security Platform">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500&auto=format&fit=crop&q=60" alt="Security Platform" width="500" height="300" loading="lazy">
                 </div>
                 <div class="inspiration-info">
                     <h3 class="inspiration-title">Security Platform</h3>
@@ -237,7 +243,7 @@
             </div>
             <div class="inspiration-card">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&auto=format&fit=crop&q=60" alt="Learning Platform">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&auto=format&fit=crop&q=60" alt="Learning Platform" width="500" height="300" loading="lazy">
                 </div>
                 <div class="inspiration-info">
                     <h3 class="inspiration-title">Learning Platform</h3>
@@ -257,13 +263,13 @@
                 <p>Transform your design workflow with the power of AI. Create, iterate, and innovate faster than ever before.</p>
                 <div class="social-links">
                     <a href="#" class="social-link">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" alt="Twitter">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" alt="Twitter" width="24" height="24" loading="lazy">
                     </a>
                     <a href="#" class="social-link">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" width="24" height="24" loading="lazy">
                     </a>
                     <a href="#" class="social-link">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/discord.svg" alt="Discord">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/discord.svg" alt="Discord" width="24" height="24" loading="lazy">
                     </a>
                 </div>
             </div>
